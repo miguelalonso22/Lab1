@@ -18,7 +18,7 @@ int app_main(void) {
     }
   
   //El bucle se ejecuta 3 veces
-  for (int i = 0; i < 3; i++) {
+  while (1) {
     // Encender el LED en blanco
     printf("Encendiendo el LED en blanco\n");
     encender_led(strip, 0);
@@ -40,5 +40,30 @@ int app_main(void) {
   strip->del(strip);
   return 0;
 }
+
+// int app_main(void) {
+//     led_strip_t *strip;
+//     if (led_rgb_init(&strip) != ESP_OK) {
+//         printf("Error al inicializar la tira de LED\n");
+//         return -1;
+//     }
+//
+// for (int i = 0; i < 3; i++) {
+//     // Configurar el primer LED en rojo
+//     strip->set_pixel(strip, 0, 255, 255, 255);
+//     strip->refresh(strip, 100);
+//     esp_rom_delay_us(1000000);
+//     
+//     strip->set_pixel(strip, 0, 0, 0, 0);
+//     strip->refresh(strip, 100);
+//     esp_rom_delay_us(1000000);
+//
+//   }
+//
+//     // Limpiar antes de salir
+//     strip->clear(strip, 100);
+//     strip->del(strip);
+//     return 0;
+// }
 
 
