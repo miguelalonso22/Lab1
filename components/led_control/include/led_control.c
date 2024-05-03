@@ -1,6 +1,6 @@
 #include "../../led_strip/include/led_strip.h"
 #include "led_control.h"
-
+#include <stdio.h>
 
 void encender_led(led_strip_t *strip, uint32_t index, char color){
 
@@ -44,40 +44,40 @@ void encender_led_custom(led_strip_t *strip, uint32_t index, uint32_t r, uint32_
     strip->refresh(strip, 100); 
 }
 
-void demo_led(led_strip_t *strip){
+void color_cycle(led_strip_t *strip, int speed_ms){
       encender_led(strip, 0, 'R');
-      delay_s(1);
+      delay_ms(speed_ms);
       apagar_led(strip, 0);
-      delay_ms(1000);
+      delay_ms(speed_ms);
 
       encender_led(strip, 0, 'G');
-      delay_s(1);
+      delay_ms(speed_ms);
       apagar_led(strip, 0);
-      delay_ms(1000);
+      delay_ms(speed_ms);
 
       encender_led(strip, 0, 'B');
-      delay_s(1);
+      delay_ms(speed_ms);
       apagar_led(strip, 0);
-      delay_ms(1000);
+      delay_ms(speed_ms);
 
       encender_led(strip, 0, 'Y');
-      delay_s(1);
+      delay_ms(speed_ms);
       apagar_led(strip, 0);
-      delay_ms(1000);
+      delay_ms(speed_ms);
 
       encender_led(strip, 0, 'V');
-      delay_s(1);
+      delay_ms(speed_ms);
       apagar_led(strip, 0);
-      delay_ms(1000);
+      delay_ms(speed_ms);
 
       encender_led(strip, 0, 'C');
-      delay_s(1);
+      delay_ms(speed_ms);
       apagar_led(strip, 0);
-      delay_ms(1000);
+      delay_ms(speed_ms);
 
       encender_led(strip, 0, 'W');
-      delay_s(1);
+      delay_ms(speed_ms);
       apagar_led(strip, 0);
-      delay_ms(1000);
+      delay_ms(speed_ms);
 
     }
